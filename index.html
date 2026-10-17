@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time Explorer · مستكشف الوقت</title>
+  <meta name="description" content="Time Explorer: a fun clock and time game for kids. Learn the clock, AM and PM, before and after, duration, and hours and minutes.">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>#welcome { display: none; } #app[hidden] { display: block; }</style></noscript>
+</head>
+<body>
+  <!-- Welcome screen: the greeting is for a group of boys and girls. Edit the texts below to change it. -->
+  <section id="welcome" class="welcome" aria-labelledby="welcomeTitle">
+    <div class="welcome-float" aria-hidden="true"><span>⭐</span><span>🕐</span><span>✨</span><span>⏰</span><span>🌟</span><span>⏳</span></div>
+    <div class="welcome-card">
+      <p class="welcome-brand">Time Explorer · <span lang="ar" dir="rtl">مستكشف الوقت</span></p>
+      <div class="welcome-owl" aria-hidden="true">🦉</div>
+      <h1 id="welcomeTitle" class="welcome-ar" lang="ar" dir="rtl">أهلًا بيكو يا حلوين! 🎉</h1>
+      <div id="welcomeClock" class="welcome-clock"></div>
+      <p class="welcome-ar2" lang="ar" dir="rtl">عاملين إيه النهاردة؟</p>
+      <p class="welcome-ar2" lang="ar" dir="rtl">جاهزين نتعلّم درس الساعات وحساب الوقت؟</p>
+      <p class="welcome-en">Welcome, friends! How are you today? Ready to learn about the clock and time?</p>
+      <button type="button" id="readyBtn" class="btn btn-primary btn-big welcome-btn">
+        <span lang="ar" dir="rtl">جاهزين!</span>
+        <span>We're ready!</span>
+        <span aria-hidden="true">🚀</span>
+      </button>
+    </div>
+  </section>
+
+  <div id="app" hidden>
+    <a class="skip-link" href="#main">Skip to the lesson</a>
+
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <div class="brand">
+          <span class="brand-owl" aria-hidden="true">🦉</span>
+          <div>
+            <h1>Time Explorer</h1>
+            <p class="brand-ar" lang="ar" dir="rtl">مستكشف الوقت</p>
+          </div>
+        </div>
+        <div class="status">
+          <div class="stars-total" id="starsTotal" title="Your stars">
+            <span aria-hidden="true">⭐</span>
+            <strong id="starCount">0</strong>
+            <span class="sr-only">stars</span>
+          </div>
+          <button type="button" class="btn btn-soft top-btn" id="soundBtn" aria-pressed="false">
+            <span class="btn-icon" aria-hidden="true">🔊</span>
+            <span class="btn-text">Sound on</span>
+          </button>
+          <button type="button" class="btn btn-soft top-btn" id="resetBtn">
+            <span aria-hidden="true">↺</span>
+            <span>Reset Progress</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <nav id="sectionNav" class="section-nav" aria-label="Sections"></nav>
+      <main id="main" tabindex="-1">
+        <noscript>Time Explorer needs JavaScript. Please turn it on in your browser.</noscript>
+      </main>
+      <footer class="foot">
+        <p>Works without internet. Your stars are saved only in this browser. · <span lang="ar" dir="rtl">يعمل بدون إنترنت، ويُحفظ التقدّم في هذا المتصفح فقط.</span></p>
+      </footer>
+    </div>
+  </div>
+
+  <dialog id="dialog" aria-labelledby="dialogTitle"></dialog>
+  <div id="fx" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
